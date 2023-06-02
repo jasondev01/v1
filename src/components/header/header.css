@@ -179,6 +179,9 @@
     .container.header__container {
         width: var(--container-width-md);
     }
+    .header__me-content {
+        padding-top: 8rem;
+    }
     .header__me-intro > h1 {
         font-size: 2.5rem;
     }
