@@ -74,6 +74,7 @@
     position: absolute;
     right: 0;
     top: 1.5rem;
+    font-weight: 600;
 }
 
 .project__content-second {
@@ -82,6 +83,10 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+.project__content h5,
+.project__content-second h5{
+    font-weight: 600;
 }
 
 .project__content-details {
@@ -130,14 +135,14 @@
 }
 
 .project__links {
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 0;
     display: flex;
     gap: 1.2rem;
     justify-content: right;
 }
 
 .project__links-second {
-    margin: 1.2rem 0;
+    margin: 1.2rem 0 0;
     display: flex;
     gap: 1.2rem;
     justify-content: left;

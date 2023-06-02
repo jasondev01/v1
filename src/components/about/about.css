@@ -79,6 +79,7 @@
         margin: auto;
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow: hidden;
     }
     .about__content {
         width: var(--container-width-md);

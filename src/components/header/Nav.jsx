@@ -52,8 +52,6 @@ const Nav = () => {
         setActiveHeadNav(navItem);
     };
 
-    
-
     return (
         <nav className={`navbar ${isNavbarVisible ? 'sticky' : ''}`}>
             <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`}></div>

@@ -7,7 +7,7 @@ import resume from '../../assets/resume.pdf'
 const CTA = () => {
 
   useEffect(() => {
-    AOS.init({duration:2000})
+    AOS.init({duration:1000})
   }, []);
 
   return (

@@ -10,7 +10,7 @@ import { useEffect } from 'react'
 const About = () => {
 
   useEffect(() => {
-    AOS.init({duration:1800})
+    AOS.init({duration:1000})
   }, []);
 
   return (
