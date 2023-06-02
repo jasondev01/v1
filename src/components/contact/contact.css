@@ -124,12 +124,16 @@ button {
 
     .contact__options {
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
     }
 }
 
 /* =================== MEDIA QUERIES (SMALL DEVICES) ============== */
 @media screen and (max-width: 600px) {
+    .contact__options {
+        gap: 1rem;
+    }
+
     .contact p {
         width: var(--container-width-sm);
     }

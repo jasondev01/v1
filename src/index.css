@@ -137,10 +137,14 @@ img {
     section {
         padding-top: 6rem;
     }
+
+    section,
+    .container {
+        overflow-x: hidden;
+    }
 }
 
-
-/* ================== MEDIA QUERIES (SMAL DEVICES) =============== */
+/* ================== MEDIA QUERIES (SMALL DEVICES) =============== */
 @media screen and (max-width: 600px) {
     .container {
         width: var(--container-width-sm);

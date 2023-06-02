@@ -15,8 +15,6 @@ import { BsGithub } from 'react-icons/bs'
 
 const Nav = () => {
 
-    const isSmallDevice = window.innerWidth <= 768;
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -29,33 +27,23 @@ const Nav = () => {
         }
     };
 
-    const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
-    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
-        const currentScrollPos = window.pageYOffset;
-
-        if (currentScrollPos > prevScrollPos) {
-            // Scrolling down
-            if (currentScrollPos > 200) {
-            setIsNavbarVisible(true);
+            const currentScrollPos = window.scrollY;
+            if (currentScrollPos > prevScrollPos) {
+                setIsNavbarVisible(true);
+            } else {
+                // Scrolling up
+                setIsNavbarVisible(false);
             }
-        } else {
-            // Scrolling up
-            setIsNavbarVisible(false);
-        }
-
-        setPrevScrollPos(currentScrollPos);
+            setPrevScrollPos(currentScrollPos);
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos]);
-
-    useEffect(() => {
-        AOS.init({duration:1800})
-      }, []);
 
     const [activeHeadNav, setActiveHeadNav] = useState('#')
 
@@ -75,9 +63,10 @@ const Nav = () => {
                     <a href="#header">
                         <img src={Logo} alt="logo" />
                     </a>
+                    <code>Jason Ruben</code>
                 </div>
                 <ul className={`header__nav-menu ${isMenuOpen ? 'show' : ''}`}>
-                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                    <li className='header__nav-item'
                         data-aos='zoom-in' 
                         data-aos-delay='100'>
                         <a href="#" 
@@ -86,7 +75,7 @@ const Nav = () => {
                             Home
                         </a> 
                     </li>
-                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                    <li className='header__nav-item'
                         data-aos='zoom-in' 
                         data-aos-delay='200'>
                         <a href="#about" 
@@ -95,7 +84,7 @@ const Nav = () => {
                             About
                         </a> 
                     </li>
-                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                    <li className='header__nav-item'
                         data-aos='zoom-in' 
                         data-aos-delay='300'>
                         <a href="#projects" 
@@ -104,7 +93,7 @@ const Nav = () => {
                             Projects
                         </a> 
                     </li>
-                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                    <li className='header__nav-item'
                         data-aos='zoom-in' 
                         data-aos-delay='400'>
                         <a href="#contact" 

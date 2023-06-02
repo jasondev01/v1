@@ -57,7 +57,7 @@ const data = [
 const Others = () => {
 
   useEffect(() => {
-    AOS.init({duration:1800})
+    AOS.init({duration:1000})
   }, []);
 
   return (

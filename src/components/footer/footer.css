@@ -38,6 +38,6 @@
 /* ============ MEDIA QUERIES (SMALL DEVICES) =========== */
 @media screen and (max-width: 800px ){
     .footer__logo img{
-        width: 4rem;
+        width: 3rem;
     }
 }

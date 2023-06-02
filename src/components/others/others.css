@@ -7,7 +7,7 @@
 
 .other__container {
     border: 1px solid transparent;
-    padding: 2.2rem 1.5rem;
+    padding: 2rem 1.5rem;
     background: var(--secondary-bg-color);
     border-radius: 5px;
     color: var(--light-color);
@@ -103,6 +103,18 @@
 @media screen and (max-width: 1024px) {
     .container.others__container {
         width: var(--container-width-sm);
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .other__container {
+        padding: 1.5rem;
+    }
+}
+
+/* =================== MEDIA QUERIES (LARGER DEVICES) ============== */
+@media screen and (max-width: 800px) {
+    .container.others__container {
+        width: var(--container-width-md);
         grid-template-columns: 1fr 1fr;
     }
 }

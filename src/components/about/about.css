@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 35% 55%;
     gap: 10%;
+    position: relative;
 }
 
 .about__me {
@@ -22,10 +23,11 @@
 .about__me-image {
     height: 100%;
     border-radius: 0.5rem;
-    overflow: hidden;
     transform: translateY(-1.5rem) translateX(1.5rem);
     transition: var(--transition);
-    filter: blur(2px)
+    filter: blur(2px);
+    position: relative;
+    overflow: hidden;
 }
 
 .about__me-image:hover {
@@ -57,10 +59,31 @@
 }
 
 /* =================== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1440px) {
+    .container.about__container {
+        width: var(--container-width-lg);
+    }
+}
+
+/* =================== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+@media screen and (max-width: 1024px) {
+    .container.about__container {
+        width: var(--container-width-md);
+    }
+}
+
+/* =================== MEDIA QUERIES (LAPTOPS DEVICES) ============== */
 @media screen and (max-width: 800px) {
-    .about__container {
+    .container.about__container {
+        width: var(--container-width-sm);
+        margin: auto;
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    .about__content {
+        width: var(--container-width-md);
+        margin: auto;
+        position: relative;
     }
 
     .about__me {
@@ -80,7 +103,7 @@
     }
 
     .about__content {
-        width: 95%;
+        width: var(--container-width-sm);
         margin: 0 auto;
     }
 }
