@@ -1,0 +1,155 @@
+import React from 'react'
+import Logo from '../../assets/favicon.png'
+import { useState } from 'react'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+
+import { BsInstagram } from 'react-icons/bs'
+import { BsLinkedin } from 'react-icons/bs'
+import { BsTwitter } from 'react-icons/bs'
+import { BsGithub } from 'react-icons/bs'
+
+
+
+const Nav = () => {
+
+    const isSmallDevice = window.innerWidth <= 768;
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+
+        if (!isMenuOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    };
+
+    const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+    const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        const currentScrollPos = window.pageYOffset;
+
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            if (currentScrollPos > 200) {
+            setIsNavbarVisible(true);
+            }
+        } else {
+            // Scrolling up
+            setIsNavbarVisible(false);
+        }
+
+        setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
+
+    useEffect(() => {
+        AOS.init({duration:1800})
+      }, []);
+
+    const [activeHeadNav, setActiveHeadNav] = useState('#')
+
+    const handleNavItemClick = (navItem) => {
+        setIsMenuOpen(false);
+        document.body.classList.remove('no-scroll');
+        setActiveHeadNav(navItem);
+    };
+
+    
+
+    return (
+        <nav className={`navbar ${isNavbarVisible ? 'sticky' : ''}`}>
+            <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`}></div>
+            <div className="header__nav-content">
+                <div className="nav__logo" data-aos='zoom-in'>
+                    <a href="#header">
+                        <img src={Logo} alt="logo" />
+                    </a>
+                </div>
+                <ul className={`header__nav-menu ${isMenuOpen ? 'show' : ''}`}>
+                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                        data-aos='zoom-in' 
+                        data-aos-delay='100'>
+                        <a href="#" 
+                        onClick={() => handleNavItemClick('#')} 
+                        className={activeHeadNav === '#' ? 'active' : ''}>
+                            Home
+                        </a> 
+                    </li>
+                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                        data-aos='zoom-in' 
+                        data-aos-delay='200'>
+                        <a href="#about" 
+                        onClick={() => handleNavItemClick('#about')} 
+                        className={activeHeadNav === '#about' ? 'active' : ''}>
+                            About
+                        </a> 
+                    </li>
+                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                        data-aos='zoom-in' 
+                        data-aos-delay='300'>
+                        <a href="#projects" 
+                        onClick={() => handleNavItemClick('#projects')} 
+                        className={activeHeadNav === '#projects' ? 'active' : ''}>
+                            Projects
+                        </a> 
+                    </li>
+                    <li className={`header__nav-item ${isSmallDevice ? '' : 'aos-init'}`}
+                        data-aos='zoom-in' 
+                        data-aos-delay='400'>
+                        <a href="#contact" 
+                        onClick={() => handleNavItemClick('#contact')} 
+                        className={activeHeadNav === '#contact' ? 'active' : ''}>
+                            Contact
+                        </a> 
+                    </li>
+                    <li className='header__nav-item'>
+                        <div className='header__nav-social'>
+                            <a href="https://www.instagram.com/jsnflix/" target='_blank'>
+                                <BsInstagram />
+                            </a>
+                        </div>
+                        <div className='header__nav-social'>
+                            <a href="https://www.linkedin.com/in/webflex/" target='_blank'>
+                                <BsLinkedin />
+                            </a>
+                        </div>
+                        <div className='header__nav-social'>
+                            <a href="https://twitter.com/jsnflix" target='_blank'>
+                                <BsTwitter />
+                            </a>
+                        </div>
+                        <div className='header__nav-social'>
+                            <a href="https://github.com/jasondev01" target='_blank'>
+                                <BsGithub />
+                            </a>
+                        </div>
+                    </li>
+                    <li className='header__nav-item'>
+                        <small>
+                            &copy; Built & Designed by Jason Ruben
+                        </small>
+                    </li>
+                </ul>
+
+                <div className={`hamburger ${isMenuOpen ? 'show' : ''}`} onClick={toggleMenu}>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                    <span className='bar'></span>
+                </div>
+            </div>
+        </nav>
+    )
+}
+
+export default Nav
