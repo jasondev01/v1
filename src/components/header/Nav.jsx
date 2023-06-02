@@ -35,8 +35,7 @@ const Nav = () => {
             const currentScrollPos = window.scrollY;
             if (currentScrollPos > prevScrollPos) {
                 setIsNavbarVisible(true);
-            } else {
-                // Scrolling up
+            } else if ( currentScrollPos == 0 ) {
                 setIsNavbarVisible(false);
             }
             setPrevScrollPos(currentScrollPos);
@@ -63,7 +62,6 @@ const Nav = () => {
                     <a href="#header">
                         <img src={Logo} alt="logo" />
                     </a>
-                    <code>Jason Ruben</code>
                 </div>
                 <ul className={`header__nav-menu ${isMenuOpen ? 'show' : ''}`}>
                     <li className='header__nav-item'
