@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/://jasondev01.github.io/portfolio/static/css/main.4f5285a0.css",
+    "main.js": "/://jasondev01.github.io/portfolio/static/js/main.20a9ec4f.js",
+    "static/media/project1.png": "/://jasondev01.github.io/portfolio/static/media/project1.d057771616cffcfb2904.png",
+    "static/media/project2.png": "/://jasondev01.github.io/portfolio/static/media/project2.0f1a5a245e317fd3738b.png",
+    "static/media/project3.png": "/://jasondev01.github.io/portfolio/static/media/project3.44df74d8955a341f4461.png",
+    "static/media/me.png": "/://jasondev01.github.io/portfolio/static/media/me.b681bbcff28c8c494c1d.png",
+    "static/media/resume.pdf": "/://jasondev01.github.io/portfolio/static/media/resume.2b9922a0b9676acb6d4e.pdf",
+    "static/media/favicon.png": "/://jasondev01.github.io/portfolio/static/media/favicon.4a7ddd4006f314c28cea.png",
+    "static/media/about-me.webp": "/://jasondev01.github.io/portfolio/static/media/about-me.cb515cd5b1164af1d64c.webp",
+    "index.html": "/://jasondev01.github.io/portfolio/index.html",
+    "main.4f5285a0.css.map": "/://jasondev01.github.io/portfolio/static/css/main.4f5285a0.css.map",
+    "main.20a9ec4f.js.map": "/://jasondev01.github.io/portfolio/static/js/main.20a9ec4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4f5285a0.css",
+    "static/js/main.20a9ec4f.js"
+  ]
+}
