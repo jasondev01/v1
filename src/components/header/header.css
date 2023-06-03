@@ -18,16 +18,12 @@
     grid-template-columns: 25% 65%;
     gap: 10%;
     align-items: center;
-    margin: 0.4rem auto;
+    margin: 0.25rem auto;
     width: var(--container-width-lg);
 }
 
-.nav__logo img {
-    width: 5rem;
-}
-
 .header__nav-content img {
-    width: 5rem;
+    width: 4rem;
     aspect-ratio: 1/1;
     object-fit: cover;
 }
@@ -74,7 +70,7 @@
 /* ============= CONTENT =============== */
 .header__me-content {
     margin: 0 auto;
-    padding-top: 17rem;
+    padding-top: 14rem;
     display: grid;
     grid-template-columns: 45% 45%;
     gap: 10%;

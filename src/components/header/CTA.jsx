@@ -11,7 +11,7 @@ const CTA = () => {
   }, []);
 
   return (
-    <div className='cta' data-aos="zoom-out-up">
+    <div className='cta' data-aos="fade-up-right">
       <a href={resume} className='btn' target='_blank'>Resumé</a>
       <a href="#contact" className='btn btn-primary'>Let's Talk</a>
     </div>
