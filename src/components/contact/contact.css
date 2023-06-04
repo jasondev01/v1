@@ -101,6 +101,24 @@ button {
     color: var(--light-color);
 }
 
+.send__failed,
+.send__success {
+    display: none;
+    padding: 5px;
+    background: rgb(255, 32, 32, 0.5);
+}
+
+.send__success {
+    background: rgb(0, 128, 0, 0.8);
+}
+
+.send__failed.span,
+.send__success.span {
+    display: block;
+    grid-column: span 2;
+}
+
+
 /* =================== MEDIA QUERIES (LARGER DEVICES) ============== */
 @media screen and (max-width: 1024px) {
     .contact p {

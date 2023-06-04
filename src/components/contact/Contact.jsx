@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './contact.css'
 import { SiMinutemailer } from 'react-icons/si'
 import { RiMessengerFill } from 'react-icons/ri'
@@ -18,6 +18,8 @@ const Contact = () => {
   }, []);
 
   const form = useRef();
+  const [ failed, setFailed ] = useState(false)
+  const [ success, setSuccess ] = useState(false)
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,6 +31,8 @@ const Contact = () => {
     if (!name.value) {
       name.style.borderColor = 'red';
       hasEmptyField = true;
+      setFailed(true)
+      setSuccess(false);
     } else {
       name.style.borderColor = '';
     }
@@ -36,6 +40,8 @@ const Contact = () => {
     if (!email.value) {
       email.style.borderColor = 'red';
       hasEmptyField = true;
+      setFailed(true)
+      setSuccess(false);
     } else {
       email.style.borderColor = '';
     }
@@ -43,6 +49,8 @@ const Contact = () => {
     if (!subject.value) {
       subject.style.borderColor = 'red';
       hasEmptyField = true;
+      setFailed(true)
+      setSuccess(false);
     } else {
       subject.style.borderColor = '';
     }
@@ -50,6 +58,8 @@ const Contact = () => {
     if (!message.value) {
       message.style.borderColor = 'red';
       hasEmptyField = true;
+      setFailed(true)
+      setSuccess(false);
     } else {
       message.style.borderColor = '';
     }
@@ -68,8 +78,9 @@ const Contact = () => {
     emailjs.sendForm('service_pihc4ad', 'template_6cymg67', form.current, 'PDUdg0JdDTMFftncl')
     .then((result) => {
         console.log(result.text);
-        alert('Email sent successfully!');
         form.current.reset();
+        setSuccess(true);
+        setFailed(false)
     }, (error) => {
         console.log(error.text);
     });
@@ -113,6 +124,8 @@ const Contact = () => {
           </article>
         </div>
         <form ref={form} onSubmit={sendEmail}>
+          <div className={`send__failed ${failed ? 'span' : ''}`}>Pleae fill all the field</div>
+          <div className={`send__success ${success ? 'span' : ''}`}> Email Sent Successfuly</div>
           <input type="text" name='name' placeholder='Your Full Name' data-aos="fade-left"/>
           <input type="text" name='email' placeholder='Your Email Address' data-aos="fade-left"/>
           <input type="text" name='subject' placeholder='Subject' data-aos="fade-left"/>
