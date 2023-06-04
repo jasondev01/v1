@@ -157,6 +157,7 @@ img {
     .container {
         overflow: hidden;
     }
+
 }
 /* ================== MEDIA QUERIES (Tablet DEVICES) =============== */
 @media screen and (max-width: 800px) {

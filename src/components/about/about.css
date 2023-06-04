@@ -10,29 +10,37 @@
     aspect-ratio: 1/1;
     border-radius: 0.5rem;
     background: linear-gradient(
-        45deg, 
+        135deg, 
         transparent,
-        var(--primary-color),
+        var(--primary-color-variant),
         transparent
-        );
+    );
     display: grid;
     place-items: center;
     position: relative;
 }
 
 .about__me-image {
+    width: 100%;
     height: 100%;
     border-radius: 0.5rem;
-    transform: translateY(-1.5rem) translateX(1.5rem);
+    transform: rotate(10deg);
     transition: var(--transition);
-    filter: blur(2px);
+    background: linear-gradient(
+        45deg, 
+        transparent,
+        var(--primary-color),
+        transparent
+    );
+    filter: blur(1px);
     position: relative;
     overflow: hidden;
+
+    padding: 2rem;
 }
 
 .about__me-image:hover {
-    filter: blur(0);
-    transform: translateY(0rem) translateX(0rem);
+    transform: rotate(0);
 }
 
 .about__content > p {
@@ -69,6 +77,10 @@
 @media screen and (max-width: 1024px) {
     .container.about__container {
         width: var(--container-width-md);
+    }
+
+    .about__me-image {
+        transform: rotate(0);
     }
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/about-me.webp'
+import ME from '../../assets/about_me.png'
+import MeBG from '../../assets/about_me-bg.webp'
 import {RxTriangleRight} from 'react-icons/rx'
 
 import AOS from 'aos'
@@ -24,6 +25,7 @@ const About = () => {
             <div className="about__me-image">
               <img src={ME} alt="About Me Image" />
             </div>
+
           </div>
 
           <article className="about__content" >
@@ -40,12 +42,12 @@ const About = () => {
               Some of the technologies I have been working with recently include:
             </p>
             <ul className='about__me-tech text-light' data-aos="zoom-in-up">
-              <li><RxTriangleRight className='about__me-tech-icon'/> JavaScript (ES6+) </li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> JavaScript</li>
               <li><RxTriangleRight className='about__me-tech-icon'/> ReactJS </li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> PHP (Laravel) </li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> PHP (Laravel)</li>
               <li><RxTriangleRight className='about__me-tech-icon'/> HTML5 </li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> CSS3 </li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> Bootstrap </li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> CSS3</li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> Bootstrap5</li>
             </ul>
           </article>
 
