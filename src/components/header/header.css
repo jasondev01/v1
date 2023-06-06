@@ -204,6 +204,10 @@
         width: var(--container-width-md);
     }
 
+    .header__nav-content {
+        margin: 0.2rem auto;
+    }
+
     .nav__logo img{
         width: 3rem;
     }
