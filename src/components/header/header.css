@@ -18,7 +18,7 @@
     grid-template-columns: 25% 65%;
     gap: 10%;
     align-items: center;
-    margin: 0.25rem auto;
+    margin: 0.8rem auto;
     width: var(--container-width-lg);
 }
 
