@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import ME from '../../assets/about_me.png'
+import ME from '../../assets/about__me.png'
 import MeBG from '../../assets/about_me-bg.webp'
 import {RxTriangleRight} from 'react-icons/rx'
 
@@ -23,7 +23,7 @@ const About = () => {
 
           <div className="about__me" data-aos="fade-right">
             <div className="about__me-image">
-              <img src={ME} alt="About Me Image" />
+              <img src={ME} alt="Jason" />
             </div>
 
           </div>
