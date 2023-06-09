@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="container footer__container">
         <div className="footer__logo" data-aos='zoom-in' data-aos-delay='100'>
           <a href="#header">
-            <img src={logo} alt="Footer Logo" />
+            <img src={logo} alt="Footer Logo" width={100} />
           </a>
         </div>
         <ul className='footer__socials'>

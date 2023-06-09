@@ -58,7 +58,7 @@ const Nav = () => {
             <div className="header__nav-content">
                 <div className="nav__logo" data-aos='zoom-in'>
                     <a href="#header">
-                        <img src={Logo} alt="logo" />
+                        <img src={Logo} alt="logo" width={100} />
                     </a>
                 </div>
                 <ul className={`header__nav-menu ${isMenuOpen ? 'show' : ''}`}>

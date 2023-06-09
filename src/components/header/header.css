@@ -79,6 +79,10 @@
     word-wrap: wrap;
 }
 
+.header__me-intro span {
+    font-weight: 500;
+}
+
 .header__me-intro > h1 {
     font-size: 4.2rem;
     font-weight: 600;

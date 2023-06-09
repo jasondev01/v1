@@ -25,7 +25,7 @@ const Projects = () => {
         <div className='project__container'>
           <div className='project__image-container-second' data-aos="fade-up">
             <a href='https://mini-project2-4h978tdj9-jsnflix.vercel.app/' target='_blank' className='project__image' >
-              <img src={P1} alt="" />
+              <img src={P1} alt="Project Movie App" width={100} height={100}/>
             </a>
           </div>
 
@@ -62,7 +62,7 @@ const Projects = () => {
 
           <div className='project__image-container' data-aos="fade-up">
             <a href='https://mini-project1-mu.vercel.app/' target='_blank' className='project__image'>
-              <img src={P2} alt="" />
+              <img src={P2} alt="Project Ecommerce Website" width={100} height={100}/>
             </a>
           </div>
 
@@ -97,7 +97,7 @@ const Projects = () => {
         <div className='project__container'>
           <div className='project__image-container-second' data-aos="fade-up">
             <a href='https://jasondev01.github.io/react-project' target='_blank' className='project__image'>
-              <img src={P3} alt="" />
+              <img src={P3} alt="Project Mockup Portfolio" width={100} height={100}/>
             </a>
           </div>
 
