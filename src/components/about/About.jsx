@@ -23,7 +23,7 @@ const About = () => {
 
           <div className="about__me" data-aos="fade-right">
             <div className="about__me-image">
-              <img src={ME} alt="Jason" />
+              <img src={ME} alt="Jason Ruben" />
             </div>
 
           </div>
