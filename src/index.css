@@ -49,6 +49,7 @@ html {
     border-radius: 5px;
     max-height: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover{
     background: var(--primary-color)
 }
