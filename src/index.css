@@ -12,22 +12,23 @@
 
 :root {
     /* background-colors */
-    --primary-bg-color: rgb(14, 18, 24);
-    --secondary-bg-color: rgb(22, 35, 54);
-    --overlay-bg-color: rgb(22, 35, 54, 0.7);
+    --primary-bg-color: #0e1218;
+    --secondary-bg-color: #162336;
+    --overlay-bg-color: #162336b3;
 
     /* text-colors */
-    --primary-color: rgb(77, 181, 255);
-    --primary-color-variant: hsl(205, 92%, 38%);
-    --light-color: rgb(255, 255, 255, 0.6);
-    --light-color-variant : rgb(255, 255, 255, 0.825);
-    --white: rgba(255, 255, 255);
+    --primary-color: #4db5ff;
+    --primary-color-variant: #0870ba;
+    --light-color: #ffffff99;
+    --light-color-variant : #ffffffd2;
+    --white: #ffffff;
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
 
     --transition: all .4s ease;
+    --shadow: 2px 0px 7px 1px #4abdff4d;;
 }
 
 html {

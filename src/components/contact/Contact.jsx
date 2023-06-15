@@ -4,12 +4,11 @@ import { SiMinutemailer } from 'react-icons/si'
 import { RiMessengerFill } from 'react-icons/ri'
 import { RiWhatsappFill } from 'react-icons/ri'
 import { useRef } from 'react'
-import emailjs from 'emailjs-com'
+import sendEmail from './validationUtils'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
-
 
 const Contact = () => {
 
@@ -17,74 +16,13 @@ const Contact = () => {
     AOS.init({duration:1000})
   }, []);
 
-  const form = useRef();
+  const form = useRef(null);
   const [ failed, setFailed ] = useState(false)
   const [ success, setSuccess ] = useState(false)
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    const { name, email, subject, message } = e.target.elements;
-
-    let hasEmptyField = false;
-
-    if (!name.value) {
-      name.style.borderColor = 'red';
-      hasEmptyField = true;
-      setFailed(true)
-      setSuccess(false);
-    } else {
-      name.style.borderColor = '';
-    }
-
-    if (!email.value) {
-      email.style.borderColor = 'red';
-      hasEmptyField = true;
-      setFailed(true)
-      setSuccess(false);
-    } else {
-      email.style.borderColor = '';
-    }
-
-    if (!subject.value) {
-      subject.style.borderColor = 'red';
-      hasEmptyField = true;
-      setFailed(true)
-      setSuccess(false);
-    } else {
-      subject.style.borderColor = '';
-    }
-
-    if (!message.value) {
-      message.style.borderColor = 'red';
-      hasEmptyField = true;
-      setFailed(true)
-      setSuccess(false);
-    } else {
-      message.style.borderColor = '';
-    }
-
-    if (hasEmptyField) {
-      return;
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value)) {
-      email.style.borderColor = 'red';
-      return;
-    }
-
-    emailjs.sendForm('service_pihc4ad', 'template_6cymg67', form.current, 'PDUdg0JdDTMFftncl')
-    .then((result) => {
-        console.log(result.text);
-        form.current.reset();
-        setSuccess(true);
-        setFailed(false)
-    }, (error) => {
-        console.log(error.text);
-    });
-  };
+  const handleSubmit = (e) => {
+    sendEmail(e, setFailed, setSuccess, form);
+  }
 
   return (
     <section id='contact' className='contact'>
@@ -100,7 +38,7 @@ const Contact = () => {
               <SiMinutemailer className='contact__option-icon'/> 
               <h4> Email</h4>
             </div>
-            <a href="mailto:jsnrbn01@gmail.com" target='_blank'>
+            <a href="mailto:jsnrbn01@gmail.com" target='_blank' rel="noreferrer">
               jsnrbn01@gmail.com
             </a>
           </article>
@@ -109,7 +47,7 @@ const Contact = () => {
               <RiMessengerFill className='contact__option-icon'/> 
               <h4>Messenger</h4>
             </div>
-            <a href="https://m.me/iwnn.dye" target='_blank'>
+            <a href="https://m.me/iwnn.dye" target='_blank' rel="noreferrer">
               m.me/iwnn.dye
             </a>
           </article>
@@ -118,12 +56,12 @@ const Contact = () => {
               <RiWhatsappFill className='contact__option-icon'/> 
               <h4>WhatsApp</h4>
             </div>
-            <a href="https://api.whatsapp.com/send?phone=639752276475" target='_blank'>
+            <a href="https://api.whatsapp.com/send?phone=639752276475" target='_blank' rel="noreferrer">
               +63 975 227 6475
             </a>
           </article>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={handleSubmit}>
           <div className={`send__failed ${failed ? 'span' : ''}`}>Pleae fill all the field</div>
           <div className={`send__success ${success ? 'span' : ''}`}> Email Sent Successfuly</div>
           <input type="text" name='name' placeholder='Your Full Name' data-aos="fade-left"/>

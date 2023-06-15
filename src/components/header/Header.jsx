@@ -29,7 +29,7 @@ const Header = () => {
             <CTA />
           </div>
           <div className="header__me-image" data-aos="zoom-out-left" data-aos-delay="200">
-            <img src={ME} alt="Jason Ruben A" width={100} />
+            <img src={ME} alt="A Picture of Jason Ruben looking down" width={100} />
           </div>
           <Socials />
           <a href="#about" className='scroll_down'>Scroll Down</a>

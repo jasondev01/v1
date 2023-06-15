@@ -31,7 +31,7 @@
 .header__nav-menu {
     display: flex;
     gap: 2rem;
-    justify-content: end;
+    justify-content: flex-end;
     flex-wrap: wrap;
 }
 
@@ -333,6 +333,10 @@
     .socials,
     .scroll_down {
         display: none;
+    }
+
+    .header__me-image {
+        width: 100%;
     }
 
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import Logo from '../../assets/favicon.png'
 import { useState } from 'react'
 
-import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 
@@ -10,8 +9,6 @@ import { BsInstagram } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
-
-
 
 const Nav = () => {
 
@@ -27,6 +24,10 @@ const Nav = () => {
         }
     };
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    }
+
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(false);
 
@@ -35,7 +36,7 @@ const Nav = () => {
             const currentScrollPos = window.scrollY;
             if (currentScrollPos > prevScrollPos) {
                 setIsNavbarVisible(true);
-            } else if ( currentScrollPos == 0 ) {
+            } else if ( currentScrollPos === 0 ) {
                 setIsNavbarVisible(false);
             }
             setPrevScrollPos(currentScrollPos);
@@ -54,7 +55,7 @@ const Nav = () => {
 
     return (
         <nav className={`navbar ${isNavbarVisible ? 'sticky' : ''}`}>
-            <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`}></div>
+            <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`} onClick={closeMenu} onTouchStart={closeMenu}></div>
             <div className="header__nav-content">
                 <div className="nav__logo" data-aos='zoom-in'>
                     <a href="#header">
@@ -65,9 +66,9 @@ const Nav = () => {
                     <li className='header__nav-item'
                         data-aos='zoom-in' 
                         data-aos-delay='100'>
-                        <a href="#" 
-                        onClick={() => handleNavItemClick('#')} 
-                        className={activeHeadNav === '#' ? 'active' : ''}>
+                        <a href="#header" 
+                        onClick={() => handleNavItemClick('#header')} 
+                        className={activeHeadNav === '#header' ? 'active' : ''}>
                             Home
                         </a> 
                     </li>
@@ -100,22 +101,22 @@ const Nav = () => {
                     </li>
                     <li className='header__nav-item'>
                         <div className='header__nav-social'>
-                            <a href="https://www.instagram.com/jsnflix/" target='_blank'>
+                            <a href="https://www.instagram.com/jsnflix/" target='_blank' rel="noreferrer">
                                 <BsInstagram />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://www.linkedin.com/in/webflex/" target='_blank'>
+                            <a href="https://www.linkedin.com/in/webflex/" target='_blank' rel="noreferrer">
                                 <BsLinkedin />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://twitter.com/jsnflix" target='_blank'>
+                            <a href="https://twitter.com/jsnflix" target='_blank' rel="noreferrer">
                                 <BsTwitter />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://github.com/jasondev01" target='_blank'>
+                            <a href="https://github.com/jasondev01" target='_blank' rel="noreferrer">
                                 <BsGithub />
                             </a>
                         </div>

@@ -12,7 +12,7 @@ const CTA = () => {
 
   return (
     <div className='cta' data-aos="fade-up-right">
-      <a href={resume} className='btn' target='_blank'>Resumé</a>
+      <a href={resume} className='btn' target='_blank' rel="noreferrer">Resumé</a>
       <a href="#contact" className='btn btn-primary'>Let's Talk</a>
     </div>
   )
