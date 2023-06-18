@@ -23,7 +23,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     sendEmail(e, setFailed, setSuccess, form);
   }
-
+  
   return (
     <section id='contact' className='contact'>
       <h5 data-aos="fade-up">Get In Touch</h5>
@@ -64,10 +64,22 @@ const Contact = () => {
         <form ref={form} onSubmit={handleSubmit}>
           <div className={`send__failed ${failed ? 'span' : ''}`}>Pleae fill all the field</div>
           <div className={`send__success ${success ? 'span' : ''}`}> Email Sent Successfuly</div>
-          <input type="text" name='name' placeholder='Your Full Name' data-aos="fade-left"/>
-          <input type="text" name='email' placeholder='Your Email Address' data-aos="fade-left"/>
-          <input type="text" name='subject' placeholder='Subject' data-aos="fade-left"/>
-          <textarea name="message" rows="8" placeholder='Your Message' data-aos="fade-left"></textarea>
+          <div className='name1' data-aos="fade-left">
+            <input type="text" name='name' required/>
+            <label htmlFor="name" >Full Name</label>
+          </div>
+          <div className="email1" data-aos="fade-left">
+            <input type="text" name='email' required/>
+            <label htmlFor="email" >Email Address</label>
+          </div>
+          <div className="subject1" data-aos="fade-left">
+            <input type="text" name='subject' required/>
+            <label htmlFor="subject" >Subject</label>
+          </div>
+          <div className="message1" data-aos="fade-left">
+            <textarea name="message" rows="8" required></textarea>
+            <label htmlFor="message">Your Message</label>
+          </div>
           <button type='submit' className='btn btn-primary' data-aos="fade-left">Submit</button>
         </form>
       </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import './about.css'
 import ME from '../../assets/about__me.png'
-import MeBG from '../../assets/about_me-bg.webp'
 import {RxTriangleRight} from 'react-icons/rx'
 
 import AOS from 'aos'

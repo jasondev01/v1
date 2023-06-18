@@ -4,7 +4,7 @@
 
 .contact p {
     width: 35%;
-    margin: 0 auto 3rem;
+    margin: 0 auto 1.5rem;
     text-align: center;
 }
 
@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 30% 58%;
     gap: 12%;
+    padding-top: 1.5rem;
 }
 
 .contact__options {
@@ -61,12 +62,12 @@ form {
     gap: 1.2rem;
     font-family: "Poppins", sans-serif;
     color: #fff;
+    
 }
 
 input,
 textarea {
     padding: 1.2rem;
-    /* border-radius: 0.5rem; */
     resize: none;
     color: var(--light-color-variant);
     background-color: var(--secondary-bg-color);
@@ -74,6 +75,7 @@ textarea {
     font-size: 0.9rem;
     transition: var(--transition);
     font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
 
 input:focus,
@@ -81,18 +83,40 @@ textarea:focus {
     border-color: var(--primary-color-variant);
 }
 
-input::placeholder,
-textarea::placeholder {
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+    transform: translate(-15px, -27px );
+    background-color: #1623360c;
+    backdrop-filter: blur(15px);
+    font-size: 12px;
+}
+
+.name1,
+.email1,
+.subject1,
+.message1 {
+    position: relative;
+}
+
+.subject1,
+.message1 {
+    grid-column: span 2;
+}
+
+label {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    padding: 1.2rem;
     color: var(--light-color);
-    font-family: 'Poppins', sans-serif;
-}
-
-input[name='subject'] {
-    grid-column: span 2;
-}
-
-textarea {
-    grid-column: span 2;
+    font-size: 15px;
+    font-weight: 100;
+    padding: 0 4px;
+    border-radius: 2px;
+    pointer-events: none;
+    transition: var(--transition);
 }
 
 button {
@@ -117,7 +141,6 @@ button {
     display: block;
     grid-column: span 2;
 }
-
 
 /* =================== MEDIA QUERIES (LARGER DEVICES) ============== */
 @media screen and (max-width: 1024px) {
