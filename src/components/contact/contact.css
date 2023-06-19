@@ -80,7 +80,7 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: var(--primary-color-variant);
+    border-color: var(--primary-color);
 }
 
 input:focus ~ label,
@@ -119,10 +119,10 @@ label {
     transition: var(--transition);
 }
 
-button {
+form button {
     font-size: 1rem;
     font-weight: 500;
-    color: var(--light-color);
+    color: var(--white-color)!important;
 }
 
 .send__failed,

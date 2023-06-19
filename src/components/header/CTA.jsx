@@ -12,8 +12,16 @@ const CTA = () => {
 
   return (
     <div className='cta' data-aos="fade-up-right">
-      <a href={resume} className='btn' target='_blank' rel="noreferrer">Resumé</a>
-      <a href="#contact" className='btn btn-primary'>Let's Talk</a>
+      <a href={resume} className='btn' target='_blank' rel="noreferrer">
+          Resumé
+        <span className='running-light'></span>
+        <span className='running-light'></span>
+        <span className='running-light'></span>
+        <span className='running-light'></span>
+        </a>
+      <a href="#contact" className='btn btn-primary'>
+        Let's Talk
+        </a>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './contact.css'
 import { SiMinutemailer } from 'react-icons/si'
 import { RiMessengerFill } from 'react-icons/ri'
 import { RiWhatsappFill } from 'react-icons/ri'
@@ -9,6 +8,9 @@ import sendEmail from './validationUtils'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+
+import './contact.css'
+
 
 const Contact = () => {
 
@@ -62,8 +64,8 @@ const Contact = () => {
           </article>
         </div>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className={`send__failed ${failed ? 'span' : ''}`}>Pleae fill all the field</div>
-          <div className={`send__success ${success ? 'span' : ''}`}> Email Sent Successfuly</div>
+          <div className={`send__failed ${failed ? 'span' : ''}`}>Please fill all the field</div>
+          <div className={`send__success ${success ? 'span' : ''}`}>Message Sent Successfuly</div>
           <div className='name1' data-aos="fade-left">
             <input type="text" name='name' required/>
             <label htmlFor="name" >Full Name</label>
@@ -80,7 +82,7 @@ const Contact = () => {
             <textarea name="message" rows="8" required></textarea>
             <label htmlFor="message">Your Message</label>
           </div>
-          <button type='submit' className='btn btn-primary' data-aos="fade-left">Submit</button>
+          <button type='submit' data-aos="fade-left" className='btn btn-primary' >Send a Message</button>
         </form>
       </div>
     </section>
