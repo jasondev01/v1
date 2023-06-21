@@ -1,6 +1,4 @@
 import React from 'react'
-import { useEffect } from 'react';
-import AOS from 'aos'
 import resume from '../../assets/resume.pdf'
 
 const CTA = () => {
