@@ -25,7 +25,7 @@ const Header = () => {
             <p className='text-light' data-aos="fade-right" data-aos-delay="300">
               A highly motivated amateur freelance web developer with a passion for creating dynamic, user-friendly websites and applications.
             </p>
-            <CTA />
+            <CTA/>
           </div>
           <div className="header__me-image" data-aos="zoom-out-left" data-aos-delay="200">
             <img src={ME} alt="A Picture of Jason Ruben looking down" width={100} />
