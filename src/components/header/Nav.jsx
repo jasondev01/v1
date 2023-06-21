@@ -1,9 +1,8 @@
 import React from 'react'
 import Logo from '../../assets/favicon.png'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import 'aos/dist/aos.css'
-import { useEffect } from 'react'
 
 import { BsInstagram } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
@@ -26,6 +25,11 @@ const Nav = () => {
 
     const closeMenu = () => {
         setIsMenuOpen(false);
+         if (!isMenuOpen) {
+            document.body.classList.remove('no-scroll');
+        } else {
+            document.body.classList.add('no-scroll');
+        }
     }
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
