@@ -1,70 +1,24 @@
 import Logo from '../../assets/favicon.png'
 import { useState, useEffect } from 'react'
-
 import 'aos/dist/aos.css'
-
-import { BsInstagram } from 'react-icons/bs'
-import { BsLinkedin } from 'react-icons/bs'
-import { BsTwitter } from 'react-icons/bs'
-import { BsGithub } from 'react-icons/bs'
+import { BsInstagram, BsLinkedin, BsTwitter, BsGithub } from 'react-icons/bs'
+import { toggleMenu, closeMenu, handleScroll, handleNavItemClick } from './navUtils';
 
 
 const Nav = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-
-        if (!isMenuOpen) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
-        }
-    };
-
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-         if (!isMenuOpen) {
-            document.body.classList.remove('no-scroll');
-        } else {
-            document.body.classList.add('no-scroll');
-        }
-    }
-
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.scrollY;
-            if (currentScrollPos > prevScrollPos) {
-                setIsNavbarVisible(true);
-            } else if ( currentScrollPos === 0 ) {
-                setIsNavbarVisible(false);
-            }
-            setPrevScrollPos(currentScrollPos);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos]);
-
     const [activeHeadNav, setActiveHeadNav] = useState('')
 
-    const handleNavItemClick = (e, navItem) => {
-        e.preventDefault();
-        const sectionElement = document.getElementById(navItem);
-        if (sectionElement) {
-            sectionElement.scrollIntoView();
-        }
-        setIsMenuOpen(false);
-        document.body.classList.remove('no-scroll');
-        setActiveHeadNav(navItem);
-    };
+    useEffect(() => {
+        return handleScroll(prevScrollPos, setPrevScrollPos, setIsNavbarVisible);
+    }, []);
 
     return (
         <nav className={`navbar ${isNavbarVisible ? 'sticky' : ''}`}>
-            <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`} onClick={closeMenu} onTouchStart={closeMenu}></div>
+            <div className={`header__nav-menu-overlay ${isMenuOpen ? 'show' : ''}`} onClick={() => closeMenu(isMenuOpen, setIsMenuOpen)} onTouchStart={() => closeMenu(isMenuOpen, setIsMenuOpen)}></div>
             <div className="header__nav-content">
                 <div className="nav__logo" data-aos='zoom-in'>
                     <a href="#header">
@@ -76,7 +30,7 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='100'>
                         <a href="#header" 
-                        onClick={(e) => handleNavItemClick(e, 'header')} 
+                        onClick={(e) => handleNavItemClick(e, 'header', setActiveHeadNav)} 
                         className={activeHeadNav === 'header' ? 'active' : ''}>
                             Home
                         </a> 
@@ -85,7 +39,7 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='200'>
                         <a href="#about" 
-                        onClick={(e) => handleNavItemClick(e, 'about')} 
+                        onClick={(e) => handleNavItemClick(e, 'about', setActiveHeadNav)} 
                         className={activeHeadNav === 'about' ? 'active' : ''}>
                             About
                         </a> 
@@ -94,7 +48,7 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='300'>
                         <a href="#projects" 
-                        onClick={(e) => handleNavItemClick(e, 'projects')} 
+                        onClick={(e) => handleNavItemClick(e, 'projects', setActiveHeadNav)} 
                         className={activeHeadNav === 'projects' ? 'active' : ''}>
                             Projects
                         </a> 
@@ -103,7 +57,7 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='400'>
                         <a href="#contact" 
-                        onClick={(e) => handleNavItemClick(e, 'contact')} 
+                        onClick={(e) => handleNavItemClick(e, 'contact', setActiveHeadNav)} 
                         className={activeHeadNav === 'contact' ? 'active' : ''}>
                             Contact
                         </a> 
@@ -137,7 +91,7 @@ const Nav = () => {
                     </li>
                 </ul>
 
-                <div className={`hamburger ${isMenuOpen ? 'show' : ''}`} onClick={toggleMenu}>
+                <div className={`hamburger ${isMenuOpen ? 'show' : ''}`} onClick={() => toggleMenu(isMenuOpen, setIsMenuOpen)}>
                     <span className='bar'></span>
                     <span className='bar'></span>
                     <span className='bar'></span>
