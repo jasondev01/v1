@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from '../../assets/favicon.png'
 import { useState, useEffect } from 'react'
 
@@ -8,6 +7,7 @@ import { BsInstagram } from 'react-icons/bs'
 import { BsLinkedin } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
 import { BsGithub } from 'react-icons/bs'
+
 
 const Nav = () => {
 
@@ -49,9 +49,16 @@ const Nav = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos]);
 
-    const [activeHeadNav, setActiveHeadNav] = useState('#')
+    const [activeHeadNav, setActiveHeadNav] = useState('')
 
-    const handleNavItemClick = (navItem) => {
+    const handleNavItemClick = (e, navItem) => {
+        e.preventDefault();
+        const sectionElement = document.getElementById(navItem);
+        if (sectionElement) {
+            sectionElement.scrollIntoView({
+                behavior: 'smooth',
+            });
+        }
         setIsMenuOpen(false);
         document.body.classList.remove('no-scroll');
         setActiveHeadNav(navItem);
@@ -71,8 +78,8 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='100'>
                         <a href="#header" 
-                        onClick={() => handleNavItemClick('#header')} 
-                        className={activeHeadNav === '#header' ? 'active' : ''}>
+                        onClick={(e) => handleNavItemClick(e, 'header')} 
+                        className={activeHeadNav === 'header' ? 'active' : ''}>
                             Home
                         </a> 
                     </li>
@@ -80,8 +87,8 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='200'>
                         <a href="#about" 
-                        onClick={() => handleNavItemClick('#about')} 
-                        className={activeHeadNav === '#about' ? 'active' : ''}>
+                        onClick={(e) => handleNavItemClick(e, 'about')} 
+                        className={activeHeadNav === 'about' ? 'active' : ''}>
                             About
                         </a> 
                     </li>
@@ -89,8 +96,8 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='300'>
                         <a href="#projects" 
-                        onClick={() => handleNavItemClick('#projects')} 
-                        className={activeHeadNav === '#projects' ? 'active' : ''}>
+                        onClick={(e) => handleNavItemClick(e, 'projects')} 
+                        className={activeHeadNav === 'projects' ? 'active' : ''}>
                             Projects
                         </a> 
                     </li>
@@ -98,8 +105,8 @@ const Nav = () => {
                         data-aos='zoom-in' 
                         data-aos-delay='400'>
                         <a href="#contact" 
-                        onClick={() => handleNavItemClick('#contact')} 
-                        className={activeHeadNav === '#contact' ? 'active' : ''}>
+                        onClick={(e) => handleNavItemClick(e, 'contact')} 
+                        className={activeHeadNav === 'contact' ? 'active' : ''}>
                             Contact
                         </a> 
                     </li>

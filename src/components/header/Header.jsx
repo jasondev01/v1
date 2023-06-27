@@ -9,7 +9,6 @@ import Nav from './Nav'
 
 const Header = () => {
 
-
   useEffect(() => {
     AOS.init({duration:800})
   }, []);
