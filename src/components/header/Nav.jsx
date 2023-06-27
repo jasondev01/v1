@@ -55,9 +55,7 @@ const Nav = () => {
         e.preventDefault();
         const sectionElement = document.getElementById(navItem);
         if (sectionElement) {
-            sectionElement.scrollIntoView({
-                behavior: 'smooth',
-            });
+            sectionElement.scrollIntoView();
         }
         setIsMenuOpen(false);
         document.body.classList.remove('no-scroll');
