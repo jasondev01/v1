@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './projects.css'
-import featuredData from './featuredData'
+import { featuredData } from './featuredData'
 import { RiGithubLine } from 'react-icons/ri'
 import { FiExternalLink } from 'react-icons/fi'
 

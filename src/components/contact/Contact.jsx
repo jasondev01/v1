@@ -11,7 +11,6 @@ import { useEffect } from 'react'
 
 import './contact.css'
 
-
 const Contact = () => {
 
   useEffect(() => {

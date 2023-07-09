@@ -29,7 +29,7 @@ const About = () => {
 
           <article className="about__content" >
             <p data-aos="fade-left" data-aos-delay='100'>
-              Hello! My name is Jason Ruben, and I am a highly motivated amateur web developer from the Philippines. I recently graduated from a 12-week online bootcamp where I completed a comprehensive full-stack developer course.
+              Hello! My name is Jason Ruben, and I am a highly motivated freelance web developer from the Philippines. 
             </p>
             <p data-aos="fade-left" data-aos-delay='200'>
               Before transitioning into web development, I spent two years working as a Virtual Assistant. While this experience provided valuable skills, I realized that my true passion lay in the world of web development. Determined to shift my career and pursue my dreams, I enrolled in an online bootcamp to gain the necessary knowledge and skills.
@@ -41,12 +41,12 @@ const About = () => {
               Some of the technologies I have been working with recently include:
             </p>
             <ul className='about__me-tech text-light' data-aos="zoom-in-up">
-              <li><RxTriangleRight className='about__me-tech-icon'/> JavaScript</li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> ReactJS </li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> PHP (Laravel)</li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> HTML5 </li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> CSS3</li>
-              <li><RxTriangleRight className='about__me-tech-icon'/> Bootstrap5</li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> javascript</li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> reactjs </li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> nodejs</li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> html5 </li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> css3</li>
+              <li><RxTriangleRight className='about__me-tech-icon'/> taidwindcss</li>
             </ul>
           </article>
 

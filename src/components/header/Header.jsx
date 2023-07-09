@@ -22,7 +22,7 @@ const Header = () => {
             <span data-aos="fade-right" data-aos-delay="100">Hello there, I am</span>
             <h1 data-aos="fade-right" data-aos-delay="200">Jason Ruben</h1>
             <p className='text-light' data-aos="fade-right" data-aos-delay="300">
-              A highly motivated amateur freelance web developer with a passion for creating dynamic, user-friendly websites and applications.
+              A highly motivated freelance web developer with a passion for creating dynamic, user-friendly websites and applications.
             </p>
             <CTA/>
           </div>

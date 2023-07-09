@@ -26,22 +26,22 @@ const Footer = () => {
         </div>
         <ul className='footer__socials'>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='200' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://www.instagram.com/jsnflix/" target='_blank'>
+            <a href="https://www.instagram.com/jsnflix/" target='_blank' rel="noreferrer">
               <BsInstagram className='footer__social-icon' />
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='300' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://www.linkedin.com/in/webflex/" target='_blank'>
+            <a href="https://www.linkedin.com/in/webflex/" target='_blank' rel="noreferrer">
               <BsLinkedin className='footer__social-icon'/>
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='400' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://twitter.com/jsnflix" target='_blank'>
+            <a href="https://twitter.com/jsnflix" target='_blank' rel="noreferrer">
               <BsTwitter className='footer__social-icon'/>
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='500' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://github.com/jasondev01" target='_blank'>
+            <a href="https://github.com/jasondev01" target='_blank' rel="noreferrer">
               <BsGithub className='footer__social-icon'/>
             </a>
           </li>
