@@ -9,8 +9,8 @@ export const featuredData = [
         title: "Soma Anime",
         demo: "https://soma-chill.vercel.app",
         github: "https://github.com/jasondev01/soma",
-        details: "This anime website app is made by consuming consumet api. This app has features to change theme, pulls latest anime release, trending animes, popular animes and can search an anime.",
-        tech: [ 'React', 'CSS3', 'SwiperJs', 'Consumet Api', 'GitHub']
+        details: "This anime website app is made by consuming api. This app pulls latest anime release, trending animes and popular animes. This app has the feature to change theme, search an anime, stream anime, automated fullscreen and automated next episode.",
+        tech: [ 'React', 'CSS3', 'SwiperJs', 'Consumet Api', 'Vercel']
     },
     {
         image: P1,
