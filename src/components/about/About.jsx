@@ -1,4 +1,3 @@
-import React from 'react'
 import './about.css'
 import ME from '../../assets/about__me.png'
 import {RxTriangleRight} from 'react-icons/rx'

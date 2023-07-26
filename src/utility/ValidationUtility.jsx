@@ -1,7 +1,6 @@
 import emailjs from 'emailjs-com'
 
-const sendEmail = (e, setFailed, setSuccess, form) => {
-   
+export const sendEmail = (e, setFailed, setSuccess, form) => {
     e.preventDefault();
 
     const { name, email, subject, message } = e.target.elements;
@@ -55,16 +54,13 @@ const sendEmail = (e, setFailed, setSuccess, form) => {
         return;
     }
 
-    emailjs.sendForm('service_pihc4ad', 'template_6cymg67', form.current, 'PDUdg0JdDTMFftncl')
+    emailjs.sendForm(`service_pihc4ad`, `template_6cymg67`, form.current, `PDUdg0JdDTMFftncl`)
     .then((result) => {
-        console.log(result.text);
         form.current.reset();
         setSuccess(true);
         setFailed(false)
+        console.log(result.text);
     }, (error) => {
         console.log(error.text);
     });
 }
-
-export default sendEmail
-

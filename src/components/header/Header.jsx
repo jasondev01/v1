@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import CTA from './CTA'
 import './header.css'
 import ME from '../../assets/header_me.png'

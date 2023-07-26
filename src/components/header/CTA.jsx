@@ -1,5 +1,5 @@
-import React from 'react'
 import resume from '../../assets/resume.pdf'
+import { handleNavItemClick } from '../../utility/NavUtility'
 
 const CTA = () => {
 
@@ -12,9 +12,12 @@ const CTA = () => {
         <span className='running-light'></span>
         <span className='running-light'></span>
         </a>
-      <a href="#contact" className='btn btn-primary'>
+      <a href="#contact" 
+        className='btn btn-primary'
+        onClick={(e) => handleNavItemClick(e, 'contact')}
+      >
         Let's Talk
-        </a>
+      </a>
     </div>
   )
 }

@@ -9,7 +9,7 @@ export const featuredData = [
         title: "Soma Anime",
         demo: "https://soma-chill.vercel.app",
         github: "https://github.com/jasondev01/soma",
-        details: "This anime website app is made by consuming api. This app pulls latest anime release, trending animes and popular animes. This app has the feature to change theme, search an anime, stream anime, automated fullscreen and automated next episode.",
+        details: "This anime website app is made by consuming api. This app pulls latest anime release, trending animes, popular animes and ongoing anime. This app has the feature to change theme, search an anime, stream anime, dynamic pages, automated fullscreen and automated next episode.",
         tech: [ 'React', 'CSS3', 'SwiperJs', 'Consumet Api', 'Vercel']
     },
     {
@@ -23,8 +23,8 @@ export const featuredData = [
     {
         image: P2,
         title: "Ecommerce Website",
-        demo: "https://github.com/jasondev01/MiniProject1",
-        github: "https://mini-project1-mu.vercel.app/",
+        demo: "https://mini-project1-mu.vercel.app/",
+        github: "https://github.com/jasondev01/MiniProject1",
         details: "This is a product-centric multipage e-commerce website that exclusively focuses on selling computer-related items. The website features three main categories: Computer Cards, Desktops, and Accessories.",
         tech: [ 'HTML5', 'CSS3', 'Bootstrap5', 'JavaScript', 'Vercel']
     },
