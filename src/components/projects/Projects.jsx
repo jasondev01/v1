@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './projects.css'
-import { featuredData } from './featuredData'
+import { FeaturedData } from './FeaturedData'
 import { RiGithubLine } from 'react-icons/ri'
 import { FiExternalLink } from 'react-icons/fi'
 
@@ -19,7 +19,7 @@ const Project = () => {
             <h2 data-aos="fade-up">Projects</h2>
             <div className='container projects__container'>
                 {
-                featuredData.map( (item, index) => {
+                FeaturedData.map( (item, index) => {
                     return (
                         <div key={index} className='project__container'>
 

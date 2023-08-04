@@ -16,7 +16,6 @@ const Contact = () => {
     const [ success, setSuccess ] = useState(false)
     const form = useRef(null);
 
-
     useEffect(() => {
         AOS.init({duration:1000})
     }, []);

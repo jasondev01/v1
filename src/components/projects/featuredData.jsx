@@ -3,13 +3,13 @@ import P1 from '../../assets/project1.png'
 import P2 from '../../assets/project2.png'
 import P3 from '../../assets/project3.png'
 
-export const featuredData = [
+export const FeaturedData = [
     {
         image: P3,
         title: "Soma Anime",
         demo: "https://soma-chill.vercel.app",
         github: "https://github.com/jasondev01/soma",
-        details: "This anime website app is made by consuming api. This app pulls latest anime release, trending animes, popular animes and ongoing anime. This app has the feature to change theme, search an anime, stream anime, dynamic pages, automated fullscreen and automated next episode.",
+        details: `This anime website application utilizes an API to fetch the most recent anime releases, popular series, and ongoing shows from the current season. It offers various exciting features, including the ability to switch themes, search for specific anime titles, and stream anime content seamlessly. The app also boasts dynamic pages for an interactive user experience, a convenient "last watched" section on the homepage, and automatic fullscreen and next episode playback for uninterrupted enjoyment.`,
         tech: [ 'React', 'CSS3', 'SwiperJs', 'Consumet Api', 'Vercel']
     },
     {
