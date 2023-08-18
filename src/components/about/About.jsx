@@ -1,5 +1,5 @@
 import './about.css'
-import ME from '../../assets/about__me.png'
+import ME from '../../assets/about__me.webp'
 import {RxTriangleRight} from 'react-icons/rx'
 
 import AOS from 'aos'

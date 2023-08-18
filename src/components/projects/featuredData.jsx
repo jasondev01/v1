@@ -1,7 +1,7 @@
 
-import P1 from '../../assets/project1.png'
-import P2 from '../../assets/project2.png'
-import P3 from '../../assets/project3.png'
+import P1 from '../../assets/project1.webp'
+import P2 from '../../assets/project2.webp'
+import P3 from '../../assets/project3.webp'
 
 export const FeaturedData = [
     {
