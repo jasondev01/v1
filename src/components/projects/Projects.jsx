@@ -13,6 +13,8 @@ const Project = () => {
         AOS.init({duration:1000})
     }, []);
 
+    // rel="noreferrer"
+
     return (
         <section id='projects'>
             <h5 data-aos="fade-up">Things I Built</h5>
@@ -24,14 +26,14 @@ const Project = () => {
                         <div key={index} className='project__container'>
 
                             <div className='project__image-container' data-aos="fade-up">
-                                <a href={item.demo} target='_blank' rel="noreferrer" className='project__image' >
+                                <a href={item.demo} target='_blank'  className='project__image' aria-label="Click and view the demo website">
                                     <img src={item.image} alt="Project Movie App" width={100} height={100}/>
                                 </a>
                             </div>
 
                             <article className='project__content' data-aos="fade-right" data-aos-offset="300">
                                 <h5 className='text-primary'>Featured Project</h5>
-                                <a href={item.demo} target='_blank' rel="noreferrer">
+                                <a href={item.demo} target='_blank' aria-label="Click and view the demo website" >
                                     <h3>{item.title}</h3>
                                 </a>
                                 <div className='project__content-details'>
@@ -49,8 +51,8 @@ const Project = () => {
                                 }
                                 </ul>
                                 <div className='project__links'>
-                                <a href={item.github} target='_blank' rel="noreferrer"><RiGithubLine className='project__link-icon'/></a>
-                                <a href={item.demo} target='_blank' rel="noreferrer"><FiExternalLink className='project__link-icon'/></a>
+                                <a href={item.github} target='_blank'  aria-label="Read more about this project on github"><RiGithubLine className='project__link-icon'/></a>
+                                <a href={item.demo} target='_blank'  aria-label="Click and view the demo website"><FiExternalLink className='project__link-icon'/></a>
                                 </div>
                             </article>
 

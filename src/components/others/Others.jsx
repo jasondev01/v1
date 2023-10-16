@@ -16,6 +16,8 @@ const Others = () => {
     AOS.init({duration:1000})
   }, []);
 
+  //rel="noreferrer"
+
   return (
     <section id='others'>
       <h2 data-aos='fade-up'>Other Projects</h2>
@@ -27,12 +29,12 @@ const Others = () => {
               <ul className='other__head'>
                 <li><CiFolderOn className='other__head-icon'/></li>
                 <li className='other__head-links'>
-                  <a href={github} target='_blank' rel="noreferrer"><RiGithubLine /></a>
-                  <a href={demo} target='_blank' rel="noreferrer"><FiExternalLink /></a>
+                  <a href={github} target='_blank' aria-label="Read more about this on GitHub"><RiGithubLine /></a>
+                  <a href={demo} target='_blank' aria-label="View the demo"><FiExternalLink /></a>
                 </li>
               </ul>
               <article className='other__details'>
-                <a href={demo} target='_blank' rel="noreferrer">
+                <a href={demo} target='_blank' aria-label="View the demo">
                   <h3>{title}</h3>
                 </a>
                 <p>{preview}</p>
