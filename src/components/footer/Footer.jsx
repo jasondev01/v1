@@ -15,6 +15,8 @@ const Footer = () => {
     AOS.init({duration:1000})
   }, []);
 
+  //rel="noreferrer"
+
   return (
     <section id='footer'>
       <div className="container footer__container">
@@ -25,22 +27,22 @@ const Footer = () => {
         </div>
         <ul className='footer__socials'>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='200' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://www.instagram.com/jsnflix/" target='_blank' rel="noreferrer">
+            <a href="https://www.instagram.com/jsnflix/" target='_blank' aria-label='Get to know me more on instagram'>
               <BsInstagram className='footer__social-icon' />
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='300' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://www.linkedin.com/in/webflex/" target='_blank' rel="noreferrer">
+            <a href="https://www.linkedin.com/in/webflex/" target='_blank' aria-label='Get to know me more on linkedin'>
               <BsLinkedin className='footer__social-icon'/>
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='400' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://twitter.com/jsnflix" target='_blank' rel="noreferrer">
+            <a href="https://twitter.com/jsnflix" target='_blank' aria-label='Get to know me more on twitter'>
               <BsTwitter className='footer__social-icon'/>
             </a>
           </li>
           <li className='footer__social' data-aos='zoom-in' data-aos-delay='500' data-aos-anchor-placement="bottom-bottom">
-            <a href="https://github.com/jasondev01" target='_blank' rel="noreferrer">
+            <a href="https://github.com/jasondev01" target='_blank' aria-label='Get to know me more on github'>
               <BsGithub className='footer__social-icon'/>
             </a>
           </li>

@@ -30,7 +30,7 @@ const Header = () => {
             <img src={ME} alt="Jason Ruben looking down" width={100} />
           </div>
           <Socials />
-          <a href="#about" className='scroll_down'>Scroll Down</a>
+          <a href="#about" className='scroll_down' aria-label='Open this link to read more about me'>Scroll Down</a>
         </div>
       </div>
     </header>

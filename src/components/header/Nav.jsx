@@ -84,22 +84,22 @@ const Nav = () => {
                     </li>
                     <li className='header__nav-item'>
                         <div className='header__nav-social'>
-                            <a href="https://www.instagram.com/jsnflix/" target='_blank' rel="noreferrer">
+                            <a href="https://www.instagram.com/jsnflix/" target='_blank' aria-label='Get to know more about me on instagram'>
                                 <BsInstagram />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://www.linkedin.com/in/webflex/" target='_blank' rel="noreferrer">
+                            <a href="https://www.linkedin.com/in/webflex/" target='_blank' aria-label='Get to know more about me on linkedin'>
                                 <BsLinkedin />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://twitter.com/jsnflix" target='_blank' rel="noreferrer">
+                            <a href="https://twitter.com/jsnflix" target='_blank' aria-label='Get to know more about me on twitter'>
                                 <BsTwitter />
                             </a>
                         </div>
                         <div className='header__nav-social'>
-                            <a href="https://github.com/jasondev01" target='_blank' rel="noreferrer">
+                            <a href="https://github.com/jasondev01" target='_blank' aria-label='Get to know more about me on github'>
                                 <BsGithub />
                             </a>
                         </div>

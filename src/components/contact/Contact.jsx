@@ -38,7 +38,7 @@ const Contact = () => {
                         <SiMinutemailer className='contact__option-icon'/> 
                         <h4> Email</h4>
                     </div>
-                    <a href="mailto:jsnrbn01@gmail.com" target='_blank' rel="noreferrer">
+                    <a href="mailto:jsnrbn01@gmail.com" target='_blank' rel="noreferrer" arial-label="You can email me by clicking this link">
                         jsnrbn01@gmail.com
                     </a>
                 </article>
@@ -47,7 +47,7 @@ const Contact = () => {
                         <RiMessengerFill className='contact__option-icon'/> 
                         <h4>Messenger</h4>
                     </div>
-                    <a href="https://m.me/iwnn.dye" target='_blank' rel="noreferrer">
+                    <a href="https://m.me/iwnn.dye" target='_blank' rel="noreferrer" arial-label="Message me on facebook messenger">
                         m.me/iwnn.dye
                     </a>
                 </article>
@@ -56,7 +56,7 @@ const Contact = () => {
                         <RiWhatsappFill className='contact__option-icon'/> 
                         <h4>WhatsApp</h4>
                     </div>
-                    <a href="https://api.whatsapp.com/send?phone=639752276475" target='_blank' rel="noreferrer">
+                    <a href="https://api.whatsapp.com/send?phone=639752276475" target='_blank' rel="noreferrer" arial-label="Call me on this number">
                         +63 975 227 6475
                     </a>
                 </article>
